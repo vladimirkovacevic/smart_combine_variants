@@ -1,0 +1,280 @@
+##fileformat=VCFv4.1
+##fileDate=20200416
+##source=strelka
+##source_version=2.9.9
+##startTime=Thu Apr 16 13:44:42 2020
+##cmdline=/opt/strelka-2.9.9/bin/configureStrelkaSomaticWorkflow.py --normalBam=/sbgenomics/workspaces/5bd36040-5df4-49a4-b7be-ca44a88a6b5d/tasks/e34355e2-4636-4178-a2e9-6fff4b449270/DNAcalling_HLAtyping_sambamba_sort_0_5_9_normal/C835.HCC1143_BL.4.converted.recalibrated.sorted.bam --tumorBam=/sbgenomics/workspaces/5bd36040-5df4-49a4-b7be-ca44a88a6b5d/tasks/e34355e2-4636-4178-a2e9-6fff4b449270/DNAcalling_HLAtyping_sambamba_sort_0_5_10_tumor/C835.HCC1143.2.converted.recalibrated.sorted.bam --referenceFasta=/sbgenomics/workspaces/5bd36040-5df4-49a4-b7be-ca44a88a6b5d/tasks/e34355e2-4636-4178-a2e9-6fff4b449270/SBG_FASTA_Indices/Homo_sapiens.GRCh38.dna.primary_assembly.fa --indelCandidates=/sbgenomics/workspaces/5bd36040-5df4-49a4-b7be-ca44a88a6b5d/tasks/e34355e2-4636-4178-a2e9-6fff4b449270/DNAcalling_HLAtyping_Strelka2_wf_Manta_1_4_0/workdir/results/variants/C835.HCC1143.2.converted.recalibrated.sorted.candidateSmallIndels.vcf.gz --exome --callRegions Regions_hg38_liftover_GRCh38_no_GLs.sorted.bed.gz
+##reference=file:///sbgenomics/workspaces/5bd36040-5df4-49a4-b7be-ca44a88a6b5d/tasks/e34355e2-4636-4178-a2e9-6fff4b449270/SBG_FASTA_Indices/Homo_sapiens.GRCh38.dna.primary_assembly.fa
+##contig=<ID=1,length=248956422>
+##contig=<ID=10,length=133797422>
+##contig=<ID=11,length=135086622>
+##contig=<ID=12,length=133275309>
+##contig=<ID=13,length=114364328>
+##contig=<ID=14,length=107043718>
+##contig=<ID=15,length=101991189>
+##contig=<ID=16,length=90338345>
+##contig=<ID=17,length=83257441>
+##contig=<ID=18,length=80373285>
+##contig=<ID=19,length=58617616>
+##contig=<ID=2,length=242193529>
+##contig=<ID=20,length=64444167>
+##contig=<ID=21,length=46709983>
+##contig=<ID=22,length=50818468>
+##contig=<ID=3,length=198295559>
+##contig=<ID=4,length=190214555>
+##contig=<ID=5,length=181538259>
+##contig=<ID=6,length=170805979>
+##contig=<ID=7,length=159345973>
+##contig=<ID=8,length=145138636>
+##contig=<ID=9,length=138394717>
+##contig=<ID=MT,length=16569>
+##contig=<ID=X,length=156040895>
+##contig=<ID=Y,length=57227415>
+##contig=<ID=KI270728.1,length=1872759>
+##contig=<ID=KI270727.1,length=448248>
+##contig=<ID=KI270442.1,length=392061>
+##contig=<ID=KI270729.1,length=280839>
+##contig=<ID=GL000225.1,length=211173>
+##contig=<ID=KI270743.1,length=210658>
+##contig=<ID=GL000008.2,length=209709>
+##contig=<ID=GL000009.2,length=201709>
+##contig=<ID=KI270747.1,length=198735>
+##contig=<ID=KI270722.1,length=194050>
+##contig=<ID=GL000194.1,length=191469>
+##contig=<ID=KI270742.1,length=186739>
+##contig=<ID=GL000205.2,length=185591>
+##contig=<ID=GL000195.1,length=182896>
+##contig=<ID=KI270736.1,length=181920>
+##contig=<ID=KI270733.1,length=179772>
+##contig=<ID=GL000224.1,length=179693>
+##contig=<ID=GL000219.1,length=179198>
+##contig=<ID=KI270719.1,length=176845>
+##contig=<ID=GL000216.2,length=176608>
+##contig=<ID=KI270712.1,length=176043>
+##contig=<ID=KI270706.1,length=175055>
+##contig=<ID=KI270725.1,length=172810>
+##contig=<ID=KI270744.1,length=168472>
+##contig=<ID=KI270734.1,length=165050>
+##contig=<ID=GL000213.1,length=164239>
+##contig=<ID=GL000220.1,length=161802>
+##contig=<ID=KI270715.1,length=161471>
+##contig=<ID=GL000218.1,length=161147>
+##contig=<ID=KI270749.1,length=158759>
+##contig=<ID=KI270741.1,length=157432>
+##contig=<ID=GL000221.1,length=155397>
+##contig=<ID=KI270716.1,length=153799>
+##contig=<ID=KI270731.1,length=150754>
+##contig=<ID=KI270751.1,length=150742>
+##contig=<ID=KI270750.1,length=148850>
+##contig=<ID=KI270519.1,length=138126>
+##contig=<ID=GL000214.1,length=137718>
+##contig=<ID=KI270708.1,length=127682>
+##contig=<ID=KI270730.1,length=112551>
+##contig=<ID=KI270438.1,length=112505>
+##contig=<ID=KI270737.1,length=103838>
+##contig=<ID=KI270721.1,length=100316>
+##contig=<ID=KI270738.1,length=99375>
+##contig=<ID=KI270748.1,length=93321>
+##contig=<ID=KI270435.1,length=92983>
+##contig=<ID=GL000208.1,length=92689>
+##contig=<ID=KI270538.1,length=91309>
+##contig=<ID=KI270756.1,length=79590>
+##contig=<ID=KI270739.1,length=73985>
+##contig=<ID=KI270757.1,length=71251>
+##contig=<ID=KI270709.1,length=66860>
+##contig=<ID=KI270746.1,length=66486>
+##contig=<ID=KI270753.1,length=62944>
+##contig=<ID=KI270589.1,length=44474>
+##contig=<ID=KI270726.1,length=43739>
+##contig=<ID=KI270735.1,length=42811>
+##contig=<ID=KI270711.1,length=42210>
+##contig=<ID=KI270745.1,length=41891>
+##contig=<ID=KI270714.1,length=41717>
+##contig=<ID=KI270732.1,length=41543>
+##contig=<ID=KI270713.1,length=40745>
+##contig=<ID=KI270754.1,length=40191>
+##contig=<ID=KI270710.1,length=40176>
+##contig=<ID=KI270717.1,length=40062>
+##contig=<ID=KI270724.1,length=39555>
+##contig=<ID=KI270720.1,length=39050>
+##contig=<ID=KI270723.1,length=38115>
+##contig=<ID=KI270718.1,length=38054>
+##contig=<ID=KI270317.1,length=37690>
+##contig=<ID=KI270740.1,length=37240>
+##contig=<ID=KI270755.1,length=36723>
+##contig=<ID=KI270707.1,length=32032>
+##contig=<ID=KI270579.1,length=31033>
+##contig=<ID=KI270752.1,length=27745>
+##contig=<ID=KI270512.1,length=22689>
+##contig=<ID=KI270322.1,length=21476>
+##contig=<ID=GL000226.1,length=15008>
+##contig=<ID=KI270311.1,length=12399>
+##contig=<ID=KI270366.1,length=8320>
+##contig=<ID=KI270511.1,length=8127>
+##contig=<ID=KI270448.1,length=7992>
+##contig=<ID=KI270521.1,length=7642>
+##contig=<ID=KI270581.1,length=7046>
+##contig=<ID=KI270582.1,length=6504>
+##contig=<ID=KI270515.1,length=6361>
+##contig=<ID=KI270588.1,length=6158>
+##contig=<ID=KI270591.1,length=5796>
+##contig=<ID=KI270522.1,length=5674>
+##contig=<ID=KI270507.1,length=5353>
+##contig=<ID=KI270590.1,length=4685>
+##contig=<ID=KI270584.1,length=4513>
+##contig=<ID=KI270320.1,length=4416>
+##contig=<ID=KI270382.1,length=4215>
+##contig=<ID=KI270468.1,length=4055>
+##contig=<ID=KI270467.1,length=3920>
+##contig=<ID=KI270362.1,length=3530>
+##contig=<ID=KI270517.1,length=3253>
+##contig=<ID=KI270593.1,length=3041>
+##contig=<ID=KI270528.1,length=2983>
+##contig=<ID=KI270587.1,length=2969>
+##contig=<ID=KI270364.1,length=2855>
+##contig=<ID=KI270371.1,length=2805>
+##contig=<ID=KI270333.1,length=2699>
+##contig=<ID=KI270374.1,length=2656>
+##contig=<ID=KI270411.1,length=2646>
+##contig=<ID=KI270414.1,length=2489>
+##contig=<ID=KI270510.1,length=2415>
+##contig=<ID=KI270390.1,length=2387>
+##contig=<ID=KI270375.1,length=2378>
+##contig=<ID=KI270420.1,length=2321>
+##contig=<ID=KI270509.1,length=2318>
+##contig=<ID=KI270315.1,length=2276>
+##contig=<ID=KI270302.1,length=2274>
+##contig=<ID=KI270518.1,length=2186>
+##contig=<ID=KI270530.1,length=2168>
+##contig=<ID=KI270304.1,length=2165>
+##contig=<ID=KI270418.1,length=2145>
+##contig=<ID=KI270424.1,length=2140>
+##contig=<ID=KI270417.1,length=2043>
+##contig=<ID=KI270508.1,length=1951>
+##contig=<ID=KI270303.1,length=1942>
+##contig=<ID=KI270381.1,length=1930>
+##contig=<ID=KI270529.1,length=1899>
+##contig=<ID=KI270425.1,length=1884>
+##contig=<ID=KI270396.1,length=1880>
+##contig=<ID=KI270363.1,length=1803>
+##contig=<ID=KI270386.1,length=1788>
+##contig=<ID=KI270465.1,length=1774>
+##contig=<ID=KI270383.1,length=1750>
+##contig=<ID=KI270384.1,length=1658>
+##contig=<ID=KI270330.1,length=1652>
+##contig=<ID=KI270372.1,length=1650>
+##contig=<ID=KI270548.1,length=1599>
+##contig=<ID=KI270580.1,length=1553>
+##contig=<ID=KI270387.1,length=1537>
+##contig=<ID=KI270391.1,length=1484>
+##contig=<ID=KI270305.1,length=1472>
+##contig=<ID=KI270373.1,length=1451>
+##contig=<ID=KI270422.1,length=1445>
+##contig=<ID=KI270316.1,length=1444>
+##contig=<ID=KI270340.1,length=1428>
+##contig=<ID=KI270338.1,length=1428>
+##contig=<ID=KI270583.1,length=1400>
+##contig=<ID=KI270334.1,length=1368>
+##contig=<ID=KI270429.1,length=1361>
+##contig=<ID=KI270393.1,length=1308>
+##contig=<ID=KI270516.1,length=1300>
+##contig=<ID=KI270389.1,length=1298>
+##contig=<ID=KI270466.1,length=1233>
+##contig=<ID=KI270388.1,length=1216>
+##contig=<ID=KI270544.1,length=1202>
+##contig=<ID=KI270310.1,length=1201>
+##contig=<ID=KI270412.1,length=1179>
+##contig=<ID=KI270395.1,length=1143>
+##contig=<ID=KI270376.1,length=1136>
+##contig=<ID=KI270337.1,length=1121>
+##contig=<ID=KI270335.1,length=1048>
+##contig=<ID=KI270378.1,length=1048>
+##contig=<ID=KI270379.1,length=1045>
+##contig=<ID=KI270329.1,length=1040>
+##contig=<ID=KI270419.1,length=1029>
+##contig=<ID=KI270336.1,length=1026>
+##contig=<ID=KI270312.1,length=998>
+##contig=<ID=KI270539.1,length=993>
+##contig=<ID=KI270385.1,length=990>
+##contig=<ID=KI270423.1,length=981>
+##contig=<ID=KI270392.1,length=971>
+##contig=<ID=KI270394.1,length=970>
+##content=strelka somatic snv calls
+##priorSomaticSnvRate=0.0001
+##INFO=<ID=QSS,Number=1,Type=Integer,Description="Quality score for any somatic snv, ie. for the ALT allele to be present at a significantly different frequency in the tumor and normal">
+##INFO=<ID=TQSS,Number=1,Type=Integer,Description="Data tier used to compute QSS">
+##INFO=<ID=NT,Number=1,Type=String,Description="Genotype of the normal in all data tiers, as used to classify somatic variants. One of {ref,het,hom,conflict}.">
+##INFO=<ID=QSS_NT,Number=1,Type=Integer,Description="Quality score reflecting the joint probability of a somatic variant and NT">
+##INFO=<ID=TQSS_NT,Number=1,Type=Integer,Description="Data tier used to compute QSS_NT">
+##INFO=<ID=SGT,Number=1,Type=String,Description="Most likely somatic genotype excluding normal noise states">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Somatic mutation">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Combined depth across samples">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="RMS Mapping Quality">
+##INFO=<ID=MQ0,Number=1,Type=Integer,Description="Total Mapping Quality Zero Reads">
+##INFO=<ID=ReadPosRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt Vs. Ref read-position in the tumor">
+##INFO=<ID=SNVSB,Number=1,Type=Float,Description="Somatic SNV site strand bias">
+##INFO=<ID=PNOISE,Number=1,Type=Float,Description="Fraction of panel containing non-reference noise at this site">
+##INFO=<ID=PNOISE2,Number=1,Type=Float,Description="Fraction of panel containing more than one non-reference noise obs at this site">
+##INFO=<ID=SomaticEVS,Number=1,Type=Float,Description="Somatic Empirical Variant Score (EVS) expressing the phred-scaled probability of the call being a false positive observation.">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth for tier1 (used+filtered)">
+##FORMAT=<ID=FDP,Number=1,Type=Integer,Description="Number of basecalls filtered from original read depth for tier1">
+##FORMAT=<ID=SDP,Number=1,Type=Integer,Description="Number of reads with deletions spanning this site at tier1">
+##FORMAT=<ID=SUBDP,Number=1,Type=Integer,Description="Number of reads below tier1 mapping quality threshold aligned across this site">
+##FORMAT=<ID=AU,Number=2,Type=Integer,Description="Number of 'A' alleles used in tiers 1,2">
+##FORMAT=<ID=CU,Number=2,Type=Integer,Description="Number of 'C' alleles used in tiers 1,2">
+##FORMAT=<ID=GU,Number=2,Type=Integer,Description="Number of 'G' alleles used in tiers 1,2">
+##FORMAT=<ID=TU,Number=2,Type=Integer,Description="Number of 'T' alleles used in tiers 1,2">
+##FILTER=<ID=LowEVS,Description="Somatic Empirical Variant Score (SomaticEVS) is below threshold">
+##FILTER=<ID=LowDepth,Description="Tumor or normal sample read depth at this locus is below 2">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL	TUMOR
+1	14653	.	C	C	.	PASS	SOMATIC;QSS=54;TQSS=1;NT=ref;QSS_NT=54;TQSS_NT=1;SGT=CC->CT;DP=111;MQ=17.91;MQ0=38;ReadPosRankSum=-1.67;SNVSB=0.00;SomaticEVS=8.67	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	36:0:0:0:0,0:34,54:0,0:2,4	25:2:0:0:0,0:13,39:0,0:10,14
+1	14671	.	G	C	.	LowEVS	SOMATIC;QSS=18;TQSS=2;NT=ref;QSS_NT=18;TQSS_NT=2;SGT=GG->CG;DP=133;MQ=17.82;MQ0=47;ReadPosRankSum=-0.72;SNVSB=0.00;SomaticEVS=0.13	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	38:0:0:0:0,0:6,9:32,59:0,0	35:2:0:0:1,1:5,11:27,53:0,0
+10	12100287	.	G	T	.	LowEVS	SOMATIC;QSS=17;TQSS=1;NT=ref;QSS_NT=17;TQSS_NT=1;SGT=GG->GT;DP=189;MQ=53.72;MQ0=1;ReadPosRankSum=-3.80;SNVSB=0.00;SomaticEVS=0.14	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	50:0:1:0:0,0:0,0:47,53:3,5	122:3:1:0:1,1:0,0:107,118:11,12
+10	12100300	.	T	G	.	LowEVS	SOMATIC;QSS=37;TQSS=2;NT=ref;QSS_NT=37;TQSS_NT=2;SGT=TT->GT;DP=71;MQ=48.94;MQ0=1;ReadPosRankSum=3.17;SNVSB=0.00;SomaticEVS=3.58	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	21:0:0:0:0,0:0,0:0,0:21,27	39:0:0:0:0,0:0,0:5,5:34,39
+11	125085136	.	T	C	.	LowEVS	SOMATIC;QSS=1;TQSS=2;NT=het;QSS_NT=1;TQSS_NT=2;SGT=CT->CT;DP=56;MQ=60.00;MQ0=0;ReadPosRankSum=-1.23;SNVSB=0.00;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	31:0:0:0:0,0:18,18:0,0:13,13	24:0:0:0:1,1:22,22:0,0:1,2
+11	125411899	.	G	A	.	LowEVS	SOMATIC;QSS=86;TQSS=1;NT=het;QSS_NT=86;TQSS_NT=1;SGT=AG->GG;DP=128;MQ=60.00;MQ0=0;ReadPosRankSum=0.00;SNVSB=0.00;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	81:0:0:0:35,35:0,0:46,46:0,0	46:0:0:0:46,47:0,0:0,0:0,0
+12	124950138	.	G	T	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=GG->GG;DP=85;MQ=60.00;MQ0=0;ReadPosRankSum=-0.46;SNVSB=0.00;SomaticEVS=1.16	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	34:0:0:0:0,0:0,0:34,34:0,0	51:0:0:0:0,0:0,0:49,49:2,2
+12	124950675	.	C	T	.	LowEVS	SOMATIC;QSS=22;TQSS=1;NT=het;QSS_NT=22;TQSS_NT=1;SGT=CT->CC;DP=51;MQ=60.00;MQ0=0;ReadPosRankSum=0.00;SNVSB=0.75;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	26:1:0:0:0,0:15,16:0,0:10,10	25:0:0:0:0,0:25,25:0,0:0,0
+13	33016895	.	C	A	.	LowEVS	SOMATIC;QSS=2;TQSS=1;NT=ref;QSS_NT=2;TQSS_NT=1;SGT=CC->CC;DP=48;MQ=60.00;MQ0=0;ReadPosRankSum=-1.38;SNVSB=0.00;SomaticEVS=0.90	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	26:0:0:0:0,0:26,26:0,0:0,0	21:0:0:0:2,2:19,20:0,0:0,0
+13	60567452	.	A	T	.	LowEVS	SOMATIC;QSS=2;TQSS=1;NT=ref;QSS_NT=2;TQSS_NT=1;SGT=AA->AA;DP=31;MQ=60.00;MQ0=0;ReadPosRankSum=1.34;SNVSB=0.00;SomaticEVS=0.93	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	14:0:0:0:14,14:0,0:0,0:0,0	17:0:0:0:15,15:0,0:0,0:2,2
+14	21602359	.	A	G	.	LowEVS	SOMATIC;QSS=53;TQSS=1;NT=het;QSS_NT=53;TQSS_NT=1;SGT=AG->AA;DP=86;MQ=52.31;MQ0=3;ReadPosRankSum=0.00;SNVSB=1.53;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	26:0:0:0:18,19:0,0:8,13:0,0	52:2:0:0:50,54:0,0:0,0:0,0
+14	21622441	.	C	G	.	LowEVS	SOMATIC;QSS=359;TQSS=1;NT=het;QSS_NT=3070;TQSS_NT=1;SGT=CG->CC;DP=330;MQ=59.97;MQ0=0;ReadPosRankSum=0.00;SNVSB=4.69;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	150:1:0:0:0,0:69,69:80,83:0,0	177:0:0:0:0,0:177,178:0,0:0,0
+15	64593309	.	C	A	.	LowEVS	SOMATIC;QSS=21;TQSS=2;NT=ref;QSS_NT=21;TQSS_NT=2;SGT=CC->AC;DP=141;MQ=30.99;MQ0=10;ReadPosRankSum=-0.72;SNVSB=0.00;SomaticEVS=0.73	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	45:0:0:0:0,0:45,52:0,0:0,0	81:1:0:0:4,4:76,85:0,0:0,0
+15	64623012	.	C	A	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CC->CC;DP=220;MQ=59.97;MQ0=0;ReadPosRankSum=-0.08;SNVSB=0.00;SomaticEVS=0.74	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	66:0:0:0:0,0:66,67:0,0:0,0	150:0:0:0:2,2:146,149:0,0:2,2
+15	64816280	.	T	C	.	LowEVS	SOMATIC;QSS=3;TQSS=1;NT=ref;QSS_NT=3;TQSS_NT=1;SGT=TT->TT;DP=74;MQ=60.00;MQ0=0;ReadPosRankSum=0.78;SNVSB=0.00;SomaticEVS=1.36	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	26:0:0:0:0,0:0,0:0,0:26,27	46:0:0:0:0,0:2,2:0,0:44,45
+16	725826	.	G	T	.	LowEVS	SOMATIC;QSS=1;TQSS=2;NT=ref;QSS_NT=1;TQSS_NT=2;SGT=GG->GG;DP=45;MQ=60.00;MQ0=0;ReadPosRankSum=-0.74;SNVSB=0.00;SomaticEVS=0.88	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	17:0:0:0:0,0:0,0:17,17:0,0	27:0:0:0:0,0:0,0:25,26:2,2
+16	90095773	.	C	T	.	LowEVS	SOMATIC;QSS=8;TQSS=2;NT=ref;QSS_NT=8;TQSS_NT=2;SGT=CC->CT;DP=265;MQ=50.54;MQ0=14;ReadPosRankSum=-0.54;SNVSB=6.15;SomaticEVS=0.27	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	126:0:0:0:0,0:122,125:0,0:4,8	109:0:0:0:0,0:100,109:0,0:9,23
+17	219665	.	C	A	.	LowEVS	SOMATIC;QSS=2;TQSS=2;NT=ref;QSS_NT=2;TQSS_NT=2;SGT=CC->CC;DP=194;MQ=60.00;MQ0=0;ReadPosRankSum=-0.20;SNVSB=0.00;SomaticEVS=1.21	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	77:0:0:0:0,0:77,78:0,0:0,0	114:1:0:0:2,2:110,113:0,0:1,1
+17	321378	.	C	A	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CC->CC;DP=139;MQ=60.00;MQ0=0;ReadPosRankSum=1.32;SNVSB=0.00;SomaticEVS=1.02	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	64:0:0:0:0,0:64,64:0,0:0,0	75:1:0:0:3,3:71,72:0,0:0,0
+18	47858	.	G	A	.	LowEVS	SOMATIC;QSS=9;TQSS=2;NT=ref;QSS_NT=9;TQSS_NT=2;SGT=GG->AG;DP=189;MQ=33.90;MQ0=48;ReadPosRankSum=-0.31;SNVSB=0.89;SomaticEVS=0.44	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	36:0:0:0:0,2:0,0:36,60:0,0	96:0:0:0:4,6:0,0:91,120:1,1
+18	224184	.	C	G	.	LowEVS	SOMATIC;QSS=2;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CG->CG;DP=15;MQ=60.00;MQ0=0;ReadPosRankSum=0.00;SNVSB=0.00;SomaticEVS=0.96	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	5:0:0:0:0,0:3,3:2,2:0,0	10:0:0:0:0,0:0,0:10,10:0,0
+19	52366398	.	G	A	.	PASS	SOMATIC;QSS=109;TQSS=1;NT=ref;QSS_NT=109;TQSS_NT=1;SGT=GG->AG;DP=159;MQ=60.00;MQ0=0;ReadPosRankSum=1.67;SNVSB=0.00;SomaticEVS=19.98	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	73:0:0:0:0,0:0,0:73,74:0,0	84:0:0:0:18,18:0,0:66,67:0,0
+19	52384184	.	A	C	.	LowEVS	SOMATIC;QSS=11;TQSS=1;NT=ref;QSS_NT=11;TQSS_NT=1;SGT=AA->AC;DP=37;MQ=60.00;MQ0=0;ReadPosRankSum=1.36;SNVSB=0.00;SomaticEVS=1.79	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	22:0:0:0:22,22:0,0:0,0:0,0	15:0:0:0:13,13:2,2:0,0:0,0
+2	71406259	.	C	T	.	LowEVS	SOMATIC;QSS=11;TQSS=1;NT=het;QSS_NT=11;TQSS_NT=1;SGT=CT->CC;DP=123;MQ=60.00;MQ0=0;ReadPosRankSum=-0.27;SNVSB=0.00;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	79:0:0:0:0,0:58,58:0,0:21,22	42:0:0:0:0,0:5,5:0,0:37,38
+2	219019033	.	G	C	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=GG->GG;DP=304;MQ=60.00;MQ0=0;ReadPosRankSum=-2.96;SNVSB=12.99;SomaticEVS=0.04	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	165:20:0:0:0,0:19,32:126,135:0,0	136:19:0:0:0,0:14,28:103,108:0,0
+20	45314540	.	C	A	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CC->CC;DP=182;MQ=60.00;MQ0=0;ReadPosRankSum=-0.30;SNVSB=0.00;SomaticEVS=1.02	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	72:0:0:0:0,0:72,72:0,0:0,0	109:0:0:0:2,2:106,107:0,0:1,1
+20	45330405	.	G	A	.	LowEVS	SOMATIC;QSS=2;TQSS=1;NT=ref;QSS_NT=2;TQSS_NT=1;SGT=GG->GG;DP=142;MQ=60.00;MQ0=0;ReadPosRankSum=2.04;SNVSB=0.00;SomaticEVS=0.63	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	57:1:0:0:0,0:1,1:55,58:0,0	83:0:0:0:2,2:0,0:80,80:1,1
+21	46346225	.	T	C	.	LowEVS	SOMATIC;QSS=100;TQSS=1;NT=het;QSS_NT=43;TQSS_NT=1;SGT=CT->TT;DP=86;MQ=60.00;MQ0=0;ReadPosRankSum=0.00;SNVSB=0.00;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	34:0:0:0:0,0:13,13:0,0:21,21	52:0:0:0:0,0:52,52:0,0:0,0
+21	46398230	.	G	A	.	LowEVS	SOMATIC;QSS=11;TQSS=1;NT=ref;QSS_NT=11;TQSS_NT=1;SGT=GG->AG;DP=22;MQ=60.00;MQ0=0;ReadPosRankSum=-1.07;SNVSB=0.00;SomaticEVS=1.44	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	10:0:0:0:0,0:0,0:10,10:0,0	12:0:0:0:2,2:0,0:10,10:0,0
+22	50609974	.	G	T	.	LowEVS	SOMATIC;QSS=4;TQSS=1;NT=ref;QSS_NT=4;TQSS_NT=1;SGT=GG->GT;DP=37;MQ=60.00;MQ0=0;ReadPosRankSum=-0.10;SNVSB=0.00;SomaticEVS=0.95	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	12:0:0:0:0,0:0,0:12,12:0,0	25:1:0:0:0,0:0,0:22,22:2,2
+22	50744057	.	A	G	.	LowEVS	SOMATIC;QSS=11;TQSS=1;NT=hom;QSS_NT=11;TQSS_NT=1;SGT=GG->AA;DP=187;MQ=32.32;MQ0=40;ReadPosRankSum=1.20;SNVSB=0.00;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	47:1:0:0:1,1:0,0:45,58:0,0	86:2:0:0:6,6:0,0:78,120:0,2
+3	50348388	.	G	T	.	LowEVS	SOMATIC;QSS=2;TQSS=1;NT=ref;QSS_NT=2;TQSS_NT=1;SGT=GG->GG;DP=92;MQ=60.00;MQ0=0;ReadPosRankSum=-0.80;SNVSB=0.00;SomaticEVS=1.35	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	58:0:0:0:0,0:0,0:58,59:0,0	31:0:0:0:0,0:0,0:29,31:2,2
+3	50349797	.	C	A	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CC->CC;DP=147;MQ=59.85;MQ0=0;ReadPosRankSum=-0.27;SNVSB=0.00;SomaticEVS=1.04	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	83:0:0:0:0,0:83,84:0,0:0,0	63:0:0:0:2,2:60,60:0,0:1,1
+3	50365968	.	C	A	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CC->CC;DP=51;MQ=60.00;MQ0=0;ReadPosRankSum=-0.71;SNVSB=0.00;SomaticEVS=0.79	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	27:0:0:0:0,0:27,27:0,0:0,0	23:0:0:0:2,2:21,22:0,0:0,0
+4	150848817	.	C	G	.	LowEVS	SOMATIC;QSS=2;TQSS=1;NT=ref;QSS_NT=2;TQSS_NT=1;SGT=CC->CC;DP=147;MQ=59.82;MQ0=0;ReadPosRankSum=-0.55;SNVSB=0.00;SomaticEVS=0.82	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	87:0:0:0:0,0:87,87:0,0:0,0	59:1:0:0:0,0:56,58:2,2:0,0
+4	151128183	.	C	G	.	LowEVS	SOMATIC;QSS=14;TQSS=1;NT=ref;QSS_NT=14;TQSS_NT=1;SGT=CC->CG;DP=59;MQ=60.00;MQ0=0;ReadPosRankSum=0.52;SNVSB=0.00;SomaticEVS=3.39	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	42:0:0:0:0,0:42,42:0,0:0,0	17:0:0:0:0,0:15,15:2,2:0,0
+5	134738811	.	C	A	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CC->CC;DP=60;MQ=60.00;MQ0=0;ReadPosRankSum=-0.71;SNVSB=0.00;SomaticEVS=0.89	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	28:0:0:0:0,0:28,29:0,0:0,0	30:0:0:0:2,2:28,29:0,0:0,0
+5	135008109	.	A	G	.	LowEVS	SOMATIC;QSS=152;TQSS=1;NT=het;QSS_NT=152;TQSS_NT=1;SGT=AG->AA;DP=144;MQ=60.00;MQ0=0;ReadPosRankSum=1.52;SNVSB=1.52;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	48:0:0:0:21,21:0,0:27,27:0,0	96:0:0:0:95,95:0,0:1,1:0,0
+6	78946845	.	A	T	.	LowEVS	SOMATIC;QSS=106;TQSS=2;NT=het;QSS_NT=106;TQSS_NT=2;SGT=AT->AA;DP=128;MQ=60.00;MQ0=0;ReadPosRankSum=0.00;SNVSB=2.18;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	41:0:0:0:25,26:0,0:0,0:16,16	86:0:0:0:86,86:0,0:0,0:0,0
+6	78946853	.	G	A	.	LowEVS	SOMATIC;QSS=109;TQSS=2;NT=het;QSS_NT=109;TQSS_NT=2;SGT=AG->GG;DP=127;MQ=60.00;MQ0=0;ReadPosRankSum=0.00;SNVSB=2.25;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	40:0:0:0:17,17:0,0:23,24:0,0	86:0:0:0:0,0:0,0:86,86:0,0
+7	155803020	.	A	G	.	LowEVS	SOMATIC;QSS=4;TQSS=1;NT=ref;QSS_NT=4;TQSS_NT=1;SGT=AA->AG;DP=13;MQ=60.00;MQ0=0;ReadPosRankSum=0.39;SNVSB=0.00;SomaticEVS=0.63	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	3:0:0:0:3,3:0,0:0,0:0,0	10:0:0:0:8,8:0,0:2,2:0,0
+7	155806606	.	C	T	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=het;QSS_NT=1;TQSS_NT=1;SGT=CT->CT;DP=57;MQ=60.00;MQ0=0;ReadPosRankSum=1.88;SNVSB=0.00;SomaticEVS=0.00	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	33:0:0:0:0,0:18,18:0,0:15,15	24:0:0:0:0,0:2,2:0,0:22,22
+8	143975304	.	C	G	.	LowEVS	SOMATIC;QSS=4;TQSS=2;NT=ref;QSS_NT=4;TQSS_NT=2;SGT=CC->CG;DP=176;MQ=59.90;MQ0=0;ReadPosRankSum=-1.79;SNVSB=24.36;SomaticEVS=0.04	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	43:4:0:0:0,0:34,34:5,9:0,0	133:14:0:0:0,0:106,107:13,26:0,0
+8	143977665	.	C	A	.	LowEVS	SOMATIC;QSS=3;TQSS=1;NT=ref;QSS_NT=3;TQSS_NT=1;SGT=CC->AC;DP=34;MQ=60.00;MQ0=0;ReadPosRankSum=-1.15;SNVSB=0.00;SomaticEVS=0.81	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	9:0:0:0:0,0:9,10:0,0:0,0	24:0:0:0:2,2:22,22:0,0:0,0
+8	143978049	.	C	A	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CC->CC;DP=26;MQ=60.00;MQ0=0;ReadPosRankSum=0.50;SNVSB=0.00;SomaticEVS=0.46	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	6:0:0:0:0,0:6,6:0,0:0,0	20:0:0:0:2,2:18,18:0,0:0,0
+9	136475287	.	C	A	.	LowEVS	SOMATIC;QSS=1;TQSS=1;NT=ref;QSS_NT=1;TQSS_NT=1;SGT=CC->CC;DP=54;MQ=60.00;MQ0=0;ReadPosRankSum=-0.28;SNVSB=0.00;SomaticEVS=0.85	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	26:0:0:0:0,0:26,26:0,0:0,0	27:0:0:0:2,2:25,26:0,0:0,0
+9	136476327	.	C	T	.	LowEVS	SOMATIC;QSS=14;TQSS=2;NT=ref;QSS_NT=14;TQSS_NT=2;SGT=CC->CT;DP=117;MQ=60.00;MQ0=0;ReadPosRankSum=-0.93;SNVSB=0.00;SomaticEVS=2.49	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	60:1:0:0:0,0:59,61:0,0:0,0	55:0:0:0:0,0:52,53:1,1:2,2
+X	53546713	.	G	T	.	LowEVS	SOMATIC;QSS=5;TQSS=1;NT=ref;QSS_NT=5;TQSS_NT=1;SGT=GG->GT;DP=48;MQ=59.46;MQ0=0;ReadPosRankSum=-1.18;SNVSB=0.00;SomaticEVS=2.14	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	36:0:0:0:0,0:0,0:36,36:0,0	11:0:0:0:0,0:0,0:9,10:2,2
+X	53575656	.	C	A	.	LowEVS	SOMATIC;QSS=3;TQSS=1;NT=ref;QSS_NT=3;TQSS_NT=1;SGT=CC->AC;DP=73;MQ=60.00;MQ0=0;ReadPosRankSum=-0.40;SNVSB=0.00;SomaticEVS=1.66	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	54:0:0:0:0,0:54,54:0,0:0,0	19:0:0:0:2,2:17,17:0,0:0,0
+Y	11332478	.	G	C	.	LowEVS	SOMATIC;QSS=5;TQSS=2;NT=ref;QSS_NT=5;TQSS_NT=2;SGT=GG->CG;DP=397;MQ=19.93;MQ0=163;ReadPosRankSum=2.47;SNVSB=0.00;SomaticEVS=0.32	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	57:24:0:0:0,0:3,4:30,168:0,0	41:11:0:0:0,1:9,15:21,209:0,0
+Y	11332550	.	C	A	.	LowEVS	SOMATIC;QSS=41;TQSS=1;NT=ref;QSS_NT=41;TQSS_NT=1;SGT=CC->AC;DP=205;MQ=18.06;MQ0=88;ReadPosRankSum=0.42;SNVSB=2.13;SomaticEVS=2.29	DP:FDP:SDP:SUBDP:AU:CU:GU:TU	22:7:0:0:0,3:15,90:0,0:0,0	27:9:0:0:4,9:14,102:0,0:0,1
