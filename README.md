@@ -12,15 +12,7 @@ Options:
   -f,--output_format <output_format>   Output file format: COMPRESSED, UNCOMPRESSED or SAME_AS_INPUT (default)
   -o,--out <out>                       Output file name
 
-## INPUT
-
-One or more VCF files
-
-## OUTPUT
-
-## A combined VCF files
-
-## USAGE EXAMPLE
+## Usage examples
 ```
 Smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL -f UNCOMPRESSED -o combined.vcf
 Smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf -s NORMAL -o combined.vcf
