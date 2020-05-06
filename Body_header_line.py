@@ -6,11 +6,12 @@ class Body_header_line:
     list_of_samples_to_be_combined = []
 
     def __init__(self, line):
-        """ Create and initialiaze a new body header line """
+        """ Create and initialize a new body header line """
         self.line = line
         self.has_format_field = False
         self.samples_names = []
-        self.invalid = True
+        self.invalid = None
+        self.error_message = None
         if line != "":
             self.extract_sample_names()
             self.update_line()
@@ -40,6 +41,7 @@ class Body_header_line:
             for sample in self.samples_names:
                 self.line += f'\t {sample}'
 
+        if self.invalid is True:
+            self.error_message = f'There is no samples {Body_header_line.list_of_samples_to_be_combined} in file.'
+
         self.line += '\n'
-
-

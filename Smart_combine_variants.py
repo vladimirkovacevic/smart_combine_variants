@@ -12,6 +12,7 @@ Options:
   -h --help
 
   -i,--input_file <inputVCF.vcf>                                        Input vcf file
+
   -s, --sample_name <sample_name>                                       Name of the sample(s) to be combined
 
   -f,--output_format <output_format>                                    Output file format:
@@ -23,21 +24,15 @@ Options:
 import time
 from docopt import docopt
 from Output_file import Output_file
-import profile
 
 start_time = time.time()
-output_file = None
-
-"""
-    Collecting arguments from input line. 
-    Create object of class Output_file.
-"""
 
 if __name__ == '__main__':
     arguments = docopt(__doc__)
 
     output_file = Output_file(arguments)
 
-    output_file.read_input_files()
+    if output_file.process_input_files() is False:
+        print(output_file.error_message)
 
     print("--- %s seconds ---" % (time.time() - start_time))
