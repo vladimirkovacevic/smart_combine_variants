@@ -55,8 +55,7 @@ class Body_record:
         return self.line
 
     def extract_data_from_line(self):
-        """ Get separate fields in line according to the Header line for the body.
-        """
+        """ Get separate fields in line according to the Header line for the body. """
         self.line = self.line.replace('\n', '')
         fields_in_body_record = self.line.split('\t')
         self.chrom = fields_in_body_record[0]
