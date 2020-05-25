@@ -37,3 +37,6 @@ Options:
 
     -v,--verbose                        Printing test data to stderr [default: False]
 ```
+
+## Docker
+SCV is available in [Docker container](cgc-images.sbgenomics.com/dpjevic/scv_2.0:latest) built from [Dockerfile](https://github.com/vladimirkovacevic/smart_combine_variants/blob/master/Docker/Dockerfile). 
