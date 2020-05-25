@@ -4,32 +4,32 @@
 """
 SmartCombineVariants (SCV) v1.0 made with Python by Zorana Štaka and Darko Pjević
 This tools performs combining of two or more vcf files into one according to the perspective rules.
+Copyright (c) ETF Beograd
 
 Usage: 
-    smart_combine_variants.py (-i <inputVCF.vcf>)... [-s <sample_name>]... [-f <output_format>] [-o <out>] [options]
+    smart_combine_variants.py (-i <inputVCF.vcf>)... [-s <sample_name>] [-f <output_format>] [-o <out>] [options]
 
 Options:
 
     -h --help
 
-    -i,--input_file <inputVCF.vcf>      Input vcf file
+    -i,--input_file <inputVCF.vcf>       Input vcf file
 
     -s,--sample_name <sample_name>      Name of the sample(s) to be combined. If no sample names have not been provided
                                         all input files have to have matching sample names (order is not important).
                                         If the sample name is provided it must be in all input files. Otherwise, the
-                                        error will occur. Example: For VCF_1 with samples A, B, C and VCF_2 with samples
-                                        D, E, F to match A with E and C with D use string: A:E,C:D
+                                        error will occur.
 
-    -f,--output_format <output_format>  Output file format: COMPRESSED, UNCOMPRESSED or SAME_AS_INPUT [default: SAME_AS_INPUT]
+    -f,--output_format <output_format>   Output file format: COMPRESSED, UNCOMPRESSED or SAME_AS_INPUT [default: SAME_AS_INPUT]
 
-    -o,--out <out>                      Output file
+    -o,--out <out>                       Output file
 
     -v,--verbose                        Printing test data to stderr [default: False]
 
 Example:
 smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL -f UNCOMPRESSED -o combined.vcf -v
 smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf -s NORMAL -o combined.vcf
-smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL -s TUMOR -f COMPRESSED -o combined.vcf
+smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL,TUMOR -f COMPRESSED -o combined.vcf
 smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -o combined.vcf -v
 smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -i v3.vcf -o combined.vcf
 smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf.gz -v

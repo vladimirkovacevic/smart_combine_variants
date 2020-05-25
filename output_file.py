@@ -3,6 +3,7 @@ import re
 import toolz
 import bgzip
 
+from concurrent.futures import ThreadPoolExecutor
 from body_header_line import Body_header_line
 from body_record import Body_record
 from input_file import Input_file
@@ -34,9 +35,11 @@ class Output_file:
 
     def extract_info_from_arguments(self):
         """ Sets the attributes from respective user input parameters. """
-
-        for sample_name in self.arguments['--sample_name']:
-            self.list_of_samples_to_be_combined.append(sample_name)
+        		
+        if self.arguments['--sample_name']:
+            self.arguments['--sample_name'] = self.arguments['--sample_name'].split(',')
+            for sample_name in self.arguments['--sample_name']:
+                self.list_of_samples_to_be_combined.append(sample_name)
 
         if self.arguments['--out']:
             self.path = self.arguments['--out']
@@ -89,8 +92,9 @@ class Output_file:
                     self.check_if_input_file_invalid()
 
         if self.invalid is True:
-            if os.path.isfile(self.path):
-                os.remove(self.path)
+            if self.path:
+                if os.path.isfile(self.path):
+                    os.remove(self.path)
             return False
         else:
             return True
@@ -105,9 +109,13 @@ class Output_file:
         self.version = self.list_of_input_files[0].version
 
     def extract_chromosomes(self):
-        for input_file in self.list_of_input_files:
-            input_file.extract_indices_for_chromosomes()
-            self.chromosomes_position.update(input_file.chromosomes_positions)
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            [executor.submit(self.extract_indices_for_chrom_in_file, input_file) for input_file in
+             self.list_of_input_files]
+
+    def extract_indices_for_chrom_in_file(self, input_file):
+        input_file.extract_indices_for_chromosomes()
+        self.chromosomes_position.update(input_file.chromosomes_positions)
 
     def process_headers(self):
         """ Delete duplicates and sort all lists regarding the header. Creates a body header line according to the
@@ -129,17 +137,21 @@ class Output_file:
             chromosomes are written in the output file. """
         list_of_chrom = list(self.chromosomes_position.keys())
         list_of_chrom.sort(key=lambda x: self.alphanum_key(x))
+
         for chrom in list_of_chrom:
             self.list_of_body_records_chrom.clear()
-            for input_file in self.list_of_input_files:
-                input_file.read_specific_chrom_body_of_file(chrom)
-                self.list_of_body_records_chrom.extend(input_file.list_of_body_records_chrom)
+            with ThreadPoolExecutor(max_workers=10) as executor:
+                [executor.submit(self.multithread_test,input_file,chrom) for input_file in self.list_of_input_files]
 
             self.adjust_body_records_to_samples()
             self.list_of_body_records_chrom = list(toolz.unique(self.list_of_body_records_chrom, key=lambda x: x.line))
             self.list_of_body_records_chrom.sort(key=lambda x: self.alphanum_key(x.line))
             if self.verify_and_merge_body_records():
                 self.write_specific_chrom_in_output_file()
+
+    def multithread_test(self, input_file, chrom):
+        input_file.read_specific_chrom_body_of_file(chrom)
+        self.list_of_body_records_chrom.extend(input_file.list_of_body_records_chrom)
 
     def check_if_input_file_invalid(self):
         """ Checks whether the input files are all valid. If there is at least one invalid file the error message is
@@ -225,6 +237,9 @@ class Output_file:
 
     def create_body_header_line_for_output(self):
         """ Creates a body header line according to the samples. """
+        if len(self.list_of_samples_to_be_combined) == 0:
+            self.determinate_samples_to_be_combined()
+        Body_header_line.list_of_samples_to_be_combined = self.list_of_samples_to_be_combined
         self.body_header_line = Body_header_line("")
         self.body_header_line.has_format_field = len(Body_header_line.list_of_samples_to_be_combined) > 0
         self.body_header_line.samples_names = Body_header_line.list_of_samples_to_be_combined
