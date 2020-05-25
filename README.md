@@ -29,14 +29,14 @@ Options:
                                         all input files have to have matching sample names (order is not important).
                                         If the sample name is provided it must be in all input files. Otherwise, the
                                         error will occur. Example: For VCF_1 with samples A, B, C and VCF_2 with samples
-                                        D, E, F to match A with E and C with D use string: A:E,C:D
+                                        C, D, E, to match A with D and B with E use string: A:D,B:E. To match C from
+                                        both VCF files use only string C.
 
     -f,--output_format <output_format>  Output file format: COMPRESSED, UNCOMPRESSED or SAME_AS_INPUT [default: SAME_AS_INPUT]
 
     -o,--out <out>                      Output file
 
-    -v,--verbose                        Printing test data to stderr [default: False]
-```
+    -v,--verbose                        Printing test data to stderr [default: False]```
 
 ## Docker
 SCV is available in [Docker container](cgc-images.sbgenomics.com/dpjevic/scv_2.0:latest) built from [Dockerfile](https://github.com/vladimirkovacevic/smart_combine_variants/blob/master/Docker/Dockerfile). 
