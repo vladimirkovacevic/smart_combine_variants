@@ -5,4 +5,5 @@ COPY . /opt
 
 RUN pip install --upgrade pip
 RUN pip install  docopt toolz bgzip
+RUN git clone https://github.com/vladimirkovacevic/smart_combine_variants.git
 
