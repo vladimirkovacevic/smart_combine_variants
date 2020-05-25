@@ -13,16 +13,18 @@ Options:
 
     -h --help
 
-    -i,--input_file <inputVCF.vcf>       Input vcf file
+    -i,--input_file <inputVCF.vcf>      Input vcf file
 
     -s,--sample_name <sample_name>      Name of the sample(s) to be combined. If no sample names have not been provided
                                         all input files have to have matching sample names (order is not important).
                                         If the sample name is provided it must be in all input files. Otherwise, the
-                                        error will occur.
+                                        error will occur. Example: For VCF_1 with samples A, B, C and VCF_2 with samples
+                                        C, D, E, to match A with D and B with E use string: A:D,B:E. To match C from
+                                        both VCF files use only string C.
 
-    -f,--output_format <output_format>   Output file format: COMPRESSED, UNCOMPRESSED or SAME_AS_INPUT [default: SAME_AS_INPUT]
+    -f,--output_format <output_format>  Output file format: COMPRESSED, UNCOMPRESSED or SAME_AS_INPUT [default: SAME_AS_INPUT]
 
-    -o,--out <out>                       Output file
+    -o,--out <out>                      Output file
 
     -v,--verbose                        Printing test data to stderr [default: False]
 
