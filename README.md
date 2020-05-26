@@ -9,7 +9,7 @@ SCV performs merging of VCF headers. INFO and FORMAT VCF columns will also be be
 ```
 Smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL -f UNCOMPRESSED -o combined.vcf -v
 Smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf -s NORMAL -o combined.vcf
-Smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL -s TUMOR -f COMPRESSED -o combined.vcf
+Smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL,TUMOR -f COMPRESSED -o combined.vcf
 Smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -o combined.vcf -v
 Smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -i v3.vcf -o combined.vcf
 Smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf.gz -v
