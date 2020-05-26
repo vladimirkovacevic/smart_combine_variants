@@ -17,7 +17,7 @@ Smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf.gz -v
 
 ## Options and parameters
 ```
-    smart_combine_variants.py (-i <inputVCF.vcf>)... [-s <sample_name>]... [-f <output_format>] [-o <out>] [options]
+    smart_combine_variants.py (-i <inputVCF.vcf>)... [-s <sample_name>] [-f <output_format>] [-o <out>] [options]
 
 Options:
 
