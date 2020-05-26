@@ -36,7 +36,7 @@ Options:
 
     -o,--out <out>                      Output file
 
-    -v,--verbose                        Printing test data to stderr [default: False]```
+    -v,--verbose                        Printing test data to stderr [default: False]
 ```
 
 ## Docker
