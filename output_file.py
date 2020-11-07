@@ -17,6 +17,7 @@ class Output_file:
         self.file = None
         self.compressed = None
         self.version = None
+        self.keep_variants_different_format = False
         self.chromosomes_position = {}
         self.body_header_line = None
         self.list_of_header_objects = list()
@@ -35,7 +36,7 @@ class Output_file:
 
     def extract_info_from_arguments(self):
         """ Sets the attributes from respective user input parameters. """
-        		
+
         if self.arguments['--sample_name']:
             self.arguments['--sample_name'] = self.arguments['--sample_name'].split(',')
             for sample_name in self.arguments['--sample_name']:
@@ -75,6 +76,10 @@ class Output_file:
             else:
                 if self.path.endswith(".gz") or self.path.endswith(".GZ"):
                     self.path = self.path[:-3]
+
+        if self.arguments['--keep_variants_with_different_format']:
+            print("Trueeeeueueu")
+            self.keep_variants_different_format = True
 
     def process_input_files(self):
         """ Processes input files, first it reads the header, then body part, taking into
@@ -298,7 +303,7 @@ class Output_file:
         if record_one.pos == record_two.pos and record_one.chrom == record_two.chrom:
             if record_one.has_format_field and record_two.has_format_field:
                 if record_one.format != record_two.format:
-                    return False
+                    return not self.keep_variants_different_format
                 else:
                     samples_data_record_one = (record_one.line.split('\t'))[8:]
                     samples_data_record_two = (record_two.line.split('\t'))[8:]
