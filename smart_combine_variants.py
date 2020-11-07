@@ -28,13 +28,15 @@ Options:
 
     -v,--verbose                        Printing test data to stderr [default: False]
 
+    -k,--keep_variants_with_different_format    Keep variants with same CHROM, POS, REF and ALT, but different format in the output file.
+
 Example:
 smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL -f UNCOMPRESSED -o combined.vcf -v
 smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf -s NORMAL -o combined.vcf
 smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -s NORMAL,TUMOR -f COMPRESSED -o combined.vcf
 smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -o combined.vcf -v
-smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -i v3.vcf -o combined.vcf
-smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf.gz -v
+smart_combine_variants.py -i data/test/v1.vcf.gz -i data/test/v2.vcf.gz -i v3.vcf -o combined.vcf -k
+smart_combine_variants.py -i data/test/v1.vcf    -i data/test/v2.vcf.gz -v -k
 
 """
 
