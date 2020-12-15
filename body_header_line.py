@@ -27,7 +27,7 @@ class Body_header_line:
 
     def update_line(self):
         """ Updates the line according to the changes. """
-        self.line = f'#CHROM \t POS \t ID \t REF \t ALT \t QUAL \t FILTER \t INFO'
+        self.line = f'#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO'
 
         if self.has_format_field:
             self.line += f'\t FORMAT'
