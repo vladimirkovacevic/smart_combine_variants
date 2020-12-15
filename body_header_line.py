@@ -30,11 +30,11 @@ class Body_header_line:
         self.line = f'#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO'
 
         if self.has_format_field:
-            self.line += f'\t FORMAT'
+            self.line += f'\tFORMAT'
 
         for sample in Body_header_line.list_of_samples_to_be_combined:
             if sample in self.samples_names:
-                self.line += f'\t {sample}'
+                self.line += f'\t{sample}'
                 self.invalid = False
 
         if len(Body_header_line.list_of_samples_to_be_combined) == 0:
